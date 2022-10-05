@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1E227E9228EDAEEA000E9B26 /* UberSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E227E9128EDAEEA000E9B26 /* UberSwiftUIApp.swift */; };
-		1E227E9428EDAEEA000E9B26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E227E9328EDAEEA000E9B26 /* ContentView.swift */; };
 		1E227E9628EDAEEC000E9B26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E227E9528EDAEEC000E9B26 /* Assets.xcassets */; };
 		1E227E9928EDAEEC000E9B26 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E227E9828EDAEEC000E9B26 /* Preview Assets.xcassets */; };
 		1E227EA328EDAEED000E9B26 /* UberSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E227EA228EDAEED000E9B26 /* UberSwiftUITests.swift */; };
 		1E227EAD28EDAEED000E9B26 /* UberSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E227EAC28EDAEED000E9B26 /* UberSwiftUIUITests.swift */; };
 		1E227EAF28EDAEED000E9B26 /* UberSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E227EAE28EDAEED000E9B26 /* UberSwiftUIUITestsLaunchTests.swift */; };
+		1E227EC328EDAF64000E9B26 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E227EC228EDAF64000E9B26 /* HomeView.swift */; };
+		1E227EC528EDAFEA000E9B26 /* UberMapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E227EC428EDAFEA000E9B26 /* UberMapViewRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		1E227E8E28EDAEEA000E9B26 /* UberSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E227E9128EDAEEA000E9B26 /* UberSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberSwiftUIApp.swift; sourceTree = "<group>"; };
-		1E227E9328EDAEEA000E9B26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1E227E9528EDAEEC000E9B26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E227E9828EDAEEC000E9B26 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1E227E9E28EDAEED000E9B26 /* UberSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UberSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +44,8 @@
 		1E227EA828EDAEED000E9B26 /* UberSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UberSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E227EAC28EDAEED000E9B26 /* UberSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberSwiftUIUITests.swift; sourceTree = "<group>"; };
 		1E227EAE28EDAEED000E9B26 /* UberSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1E227EC228EDAF64000E9B26 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1E227EC428EDAFEA000E9B26 /* UberMapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberMapViewRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +96,11 @@
 		1E227E9028EDAEEA000E9B26 /* UberSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				1E227E9128EDAEEA000E9B26 /* UberSwiftUIApp.swift */,
-				1E227E9328EDAEEA000E9B26 /* ContentView.swift */,
+				1E227EBB28EDAF1B000E9B26 /* App */,
+				1E227EBC28EDAF20000E9B26 /* Core */,
+				1E227EBD28EDAF24000E9B26 /* Extensions */,
+				1E227EBE28EDAF2A000E9B26 /* Managers */,
+				1E227EBF28EDAF2F000E9B26 /* Models */,
 				1E227E9528EDAEEC000E9B26 /* Assets.xcassets */,
 				1E227E9728EDAEEC000E9B26 /* Preview Content */,
 			);
@@ -125,6 +130,60 @@
 				1E227EAE28EDAEED000E9B26 /* UberSwiftUIUITestsLaunchTests.swift */,
 			);
 			path = UberSwiftUIUITests;
+			sourceTree = "<group>";
+		};
+		1E227EBB28EDAF1B000E9B26 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1E227E9128EDAEEA000E9B26 /* UberSwiftUIApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1E227EBC28EDAF20000E9B26 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				1E227EC128EDAF52000E9B26 /* Views */,
+				1E227EC028EDAF49000E9B26 /* ViewModels */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		1E227EBD28EDAF24000E9B26 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1E227EBE28EDAF2A000E9B26 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		1E227EBF28EDAF2F000E9B26 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1E227EC028EDAF49000E9B26 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1E227EC128EDAF52000E9B26 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1E227EC228EDAF64000E9B26 /* HomeView.swift */,
+				1E227EC428EDAFEA000E9B26 /* UberMapViewRepresentable.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +316,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E227E9428EDAEEA000E9B26 /* ContentView.swift in Sources */,
 				1E227E9228EDAEEA000E9B26 /* UberSwiftUIApp.swift in Sources */,
+				1E227EC528EDAFEA000E9B26 /* UberMapViewRepresentable.swift in Sources */,
+				1E227EC328EDAF64000E9B26 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
