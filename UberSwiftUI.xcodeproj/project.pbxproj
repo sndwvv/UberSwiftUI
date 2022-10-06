@@ -20,6 +20,7 @@
 		1E227ECF28EEE488000E9B26 /* MapViewActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E227ECE28EEE488000E9B26 /* MapViewActionButton.swift */; };
 		1E227ED128EEF618000E9B26 /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E227ED028EEF618000E9B26 /* LocationSearchView.swift */; };
 		1E227ED328EEF8BD000E9B26 /* LocationSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E227ED228EEF8BD000E9B26 /* LocationSearchResultCell.swift */; };
+		1E227ED528EF142E000E9B26 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E227ED428EF142E000E9B26 /* LocationSearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		1E227ECE28EEE488000E9B26 /* MapViewActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewActionButton.swift; sourceTree = "<group>"; };
 		1E227ED028EEF618000E9B26 /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
 		1E227ED228EEF8BD000E9B26 /* LocationSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultCell.swift; sourceTree = "<group>"; };
+		1E227ED428EF142E000E9B26 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,11 +183,11 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		1E227EC028EDAF49000E9B26 /* ViewModels */ = {
+		1E227EC028EDAF49000E9B26 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = ViewModels;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		1E227EC128EDAF52000E9B26 /* Views */ = {
@@ -202,7 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				1E227EC128EDAF52000E9B26 /* Views */,
-				1E227EC028EDAF49000E9B26 /* ViewModels */,
+				1E227EC028EDAF49000E9B26 /* ViewModel */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -210,7 +212,7 @@
 		1E227EC928EEE1BD000E9B26 /* LocationSearch */ = {
 			isa = PBXGroup;
 			children = (
-				1E227ECB28EEE1C9000E9B26 /* ViewModels */,
+				1E227ECB28EEE1C9000E9B26 /* ViewModel */,
 				1E227ECA28EEE1C4000E9B26 /* Views */,
 			);
 			path = LocationSearch;
@@ -226,11 +228,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		1E227ECB28EEE1C9000E9B26 /* ViewModels */ = {
+		1E227ECB28EEE1C9000E9B26 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1E227ED428EF142E000E9B26 /* LocationSearchViewModel.swift */,
 			);
-			path = ViewModels;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E227ED528EF142E000E9B26 /* LocationSearchViewModel.swift in Sources */,
 				1E227ED128EEF618000E9B26 /* LocationSearchView.swift in Sources */,
 				1E227EC728EDBA04000E9B26 /* LocationManager.swift in Sources */,
 				1E227ECF28EEE488000E9B26 /* MapViewActionButton.swift in Sources */,
