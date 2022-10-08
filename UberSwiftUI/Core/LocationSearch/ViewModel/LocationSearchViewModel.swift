@@ -13,7 +13,7 @@ class LocationSearchViewModel: NSObject, ObservableObject {
 	// MARK: - Properties
 	
 	@Published var results = [MKLocalSearchCompletion]()
-	@Published var selectedLocation: String?
+	@Published var selectedLocationCoordinate: CLLocationCoordinate2D? 
 	
 	private var searchCompleter = MKLocalSearchCompleter()
 	
@@ -33,8 +33,25 @@ class LocationSearchViewModel: NSObject, ObservableObject {
 	
 	// MARK: - Helpers
 	
-	func selectLocation(_ location: String) {
-		self.selectedLocation = location
+	func selectLocation(_ localSearch: MKLocalSearchCompletion) {
+		locationSearch(forLocationSearchCompletion: localSearch) { response, error in
+			if let error = error {
+				print("DEBUG: FAILED location search failed with error: \(error.localizedDescription)")
+				return
+			}
+			guard let item = response?.mapItems.first else { return }
+			let coordinate = item.placemark.coordinate
+			self.selectedLocationCoordinate = coordinate
+			print("DEBUG: SUCCESS searched for location coordinate: \(coordinate)")
+		}
+	}
+	
+	func locationSearch(forLocationSearchCompletion localSearch: MKLocalSearchCompletion,
+						completion: @escaping MKLocalSearch.CompletionHandler) {
+		let searchRequest = MKLocalSearch.Request()
+		searchRequest.naturalLanguageQuery = localSearch.title.appending(localSearch.subtitle)
+		let search = MKLocalSearch(request: searchRequest)
+		search.start(completionHandler: completion)
 	}
 	
 }
