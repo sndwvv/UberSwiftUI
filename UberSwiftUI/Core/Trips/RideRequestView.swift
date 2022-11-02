@@ -69,6 +69,7 @@ struct RideRequestView: View {
 				.foregroundColor(.gray)
 				.frame(maxWidth: .infinity, alignment: .leading)
 			
+			// Ride type selection view
 			ScrollView(.horizontal) {
 				HStack(spacing: 12) {
 					ForEach(0 ..< 3, id: \.self) { _ in
@@ -93,7 +94,49 @@ struct RideRequestView: View {
 				}
 			}
 			.padding(.horizontal)
+			
+			Divider()
+				.padding(.vertical, 8)
+			
+			// Payment Option View
+			HStack(spacing: 12) {
+				Text("Visa")
+					.font(.subheadline)
+					.fontWeight(.semibold)
+					.padding(6)
+					.background(.blue)
+					.cornerRadius(4)
+					.foregroundColor(.white)
+					.padding(.leading)
+				
+				Text("**** 1234")
+					.fontWeight(.bold)
+				
+				Spacer()
+				
+				Image(systemName: "chevron-right")
+					.imageScale(.medium)
+					.padding()
+			}
+			.frame(height: 50)
+			.background(Color(.systemGroupedBackground))
+			.cornerRadius(10)
+			.padding(.horizontal)
+			
+			
+			// Request Ride Button
+			Button {
+				
+			} label: {
+				Text("CONFIRM RIDE")
+					.fontWeight(.bold)
+					.frame(width: UIScreen.main.bounds.width - 32, height: 50)
+					.background(.blue)
+					.cornerRadius(10)
+					.foregroundColor(.white)
+			}
 		}
+		.background(.white)
     }
 }
 
