@@ -4,7 +4,7 @@
 //
 //  Created by Songyee Park on 2022/11/02.
 //
-
+ 
 import SwiftUI
 
 struct RideRequestView: View {
@@ -13,6 +13,7 @@ struct RideRequestView: View {
 			Capsule()
 				.foregroundColor(Color(.systemGray5))
 				.frame(width: 48, height: 6)
+				.padding(.top, 8)
 			
 			HStack {
 				// Indicator View
@@ -136,7 +137,9 @@ struct RideRequestView: View {
 					.foregroundColor(.white)
 			}
 		}
+		.padding(.bottom, 24)
 		.background(.white)
+		.cornerRadius(12)
     }
 }
 
