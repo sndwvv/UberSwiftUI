@@ -23,6 +23,8 @@ class LocationSearchViewModel: NSObject, ObservableObject {
 		}
 	}
 	
+	var userLocationCoordinate: CLLocationCoordinate2D?
+	
 	// MARK: - Lifecycle
 	
 	override init() {
@@ -52,6 +54,17 @@ class LocationSearchViewModel: NSObject, ObservableObject {
 		searchRequest.naturalLanguageQuery = localSearch.title.appending(localSearch.subtitle)
 		let search = MKLocalSearch(request: searchRequest)
 		search.start(completionHandler: completion)
+	}
+	
+	func computeRidePrice(forType type: RideType) -> Double {
+		guard let selectedLocationCoordinate = selectedLocationCoordinate,
+			  let userLocationCoordinate = self.userLocationCoordinate else {
+			return 0.0
+		}
+		let startLocation = CLLocation(latitude: userLocationCoordinate.latitude, longitude: userLocationCoordinate.longitude)
+		let finalLocation = CLLocation(latitude: selectedLocationCoordinate.latitude, longitude: selectedLocationCoordinate.longitude)
+		let tripDistanceInMeters = startLocation.distance(from: finalLocation)
+		return type.computePrice(for: tripDistanceInMeters)
 	}
 	
 }

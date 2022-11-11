@@ -24,6 +24,7 @@
 		1E227ED729050CD0000E9B26 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E227ED629050CD0000E9B26 /* MapViewState.swift */; };
 		1E227EDC2912B7D6000E9B26 /* RideRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E227EDB2912B7D6000E9B26 /* RideRequestView.swift */; };
 		1E9D5A592915620500747682 /* RideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D5A582915620500747682 /* RideType.swift */; };
+		1E9D5A5B291E882B00747682 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D5A5A291E882B00747682 /* Double.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		1E227ED629050CD0000E9B26 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
 		1E227EDB2912B7D6000E9B26 /* RideRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRequestView.swift; sourceTree = "<group>"; };
 		1E9D5A582915620500747682 /* RideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideType.swift; sourceTree = "<group>"; };
+		1E9D5A5A291E882B00747682 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 		1E227EBD28EDAF24000E9B26 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1E9D5A5A291E882B00747682 /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				1E227ED128EEF618000E9B26 /* LocationSearchView.swift in Sources */,
 				1E227EC728EDBA04000E9B26 /* LocationManager.swift in Sources */,
 				1E227EDC2912B7D6000E9B26 /* RideRequestView.swift in Sources */,
+				1E9D5A5B291E882B00747682 /* Double.swift in Sources */,
 				1E227ED729050CD0000E9B26 /* MapViewState.swift in Sources */,
 				1E227ECF28EEE488000E9B26 /* MapViewActionButton.swift in Sources */,
 				1E227E9228EDAEEA000E9B26 /* UberSwiftUIApp.swift in Sources */,
